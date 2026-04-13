@@ -312,8 +312,8 @@ const AboutSection = () => {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/images/about-cars.jpg" 
-                  alt="Đội xe cao cấp - Nhà Xe Tú Linh" 
+                  src="/images/xe_ghep.jpg" 
+                  alt="Dịch vụ xe ghép cao cấp - Nhà Xe Tú Linh" 
                   className="w-full h-auto object-contain"
                 />
               </div>
