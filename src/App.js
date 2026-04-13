@@ -104,9 +104,20 @@ const HeroSection = () => {
   ];
 
   return (
-    <section id="home" className="relative bg-gradient-to-br from-navy via-navy-dark to-navy-light pt-20 pb-16 lg:pb-24 overflow-hidden min-h-screen flex items-center">
+    <section id="home" className="relative pt-20 pb-16 lg:pb-24 overflow-hidden min-h-screen flex items-center">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src="/images/xe.jpg" 
+          alt="Background" 
+          className="w-full h-full object-cover"
+        />
+        {/* Light gradient overlay for better readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-blue-50/90 to-indigo-100/85"></div>
+      </div>
+
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Gradient Orbs */}
         <div className="absolute top-20 -left-20 w-96 h-96 bg-accent-red/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 -right-20 w-96 h-96 bg-accent-orange/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -128,91 +139,91 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="text-white space-y-8">
+          <div className="space-y-8">
             {/* Badge */}
             <div className="animate-fade-in">
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2.5 rounded-full shadow-lg">
+              <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-md border-2 border-accent-red/30 px-5 py-2.5 rounded-full shadow-xl">
                 <span className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-red opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-accent-red"></span>
                 </span>
-                <span className="text-sm font-semibold text-white">DỊCH VỤ VẬN CHUYỂN CAO CẤP</span>
+                <span className="text-sm font-bold text-navy">DỊCH VỤ VẬN CHUYỂN CAO CẤP</span>
               </div>
             </div>
             
             {/* Main Heading */}
             <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black mb-4 leading-tight">
-                <span className="bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+                <span className="text-navy">
                   Bảng Giá
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-accent-red via-accent-orange to-yellow-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-accent-red via-accent-orange to-yellow-500 bg-clip-text text-transparent">
                   Tuyến Xe
                 </span>
               </h1>
-              <div className="flex items-center gap-3 text-gray-300">
+              <div className="flex items-center gap-3">
                 <div className="h-1 w-12 bg-gradient-to-r from-accent-red to-accent-orange rounded-full"></div>
-                <span className="text-lg font-medium">Nam Định – Hà Nội</span>
+                <span className="text-lg font-bold text-navy">Nam Định – Hà Nội</span>
               </div>
             </div>
             
             {/* Description */}
-            <p className="text-lg lg:text-xl text-gray-300 leading-relaxed animate-fade-in-up max-w-xl" style={{ animationDelay: '0.2s' }}>
+            <p className="text-lg lg:text-xl text-gray-700 leading-relaxed animate-fade-in-up max-w-xl font-medium" style={{ animationDelay: '0.2s' }}>
               Dịch vụ xe ghép, xe riêng và đón tiễn sân bay với mức giá minh bạch, 
               tài xế chuyên nghiệp, xe đời mới, phục vụ đúng giờ.
             </p>
 
             {/* Features */}
             <div className="grid grid-cols-2 gap-4 animate-fade-in-up" style={{ animationDelay: '0.25s' }}>
-              <div className="flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4">
-                <div className="w-10 h-10 bg-accent-red/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-accent-red" fill="currentColor" viewBox="0 0 20 20">
+              <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm border-2 border-navy/10 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all">
+                <div className="w-12 h-12 bg-gradient-to-br from-accent-red to-red-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white font-bold">Đúng Giờ</div>
-                  <div className="text-gray-400 text-sm">Cam kết 100%</div>
+                  <div className="text-navy font-bold">Đúng Giờ</div>
+                  <div className="text-gray-600 text-sm">Cam kết 100%</div>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4">
-                <div className="w-10 h-10 bg-accent-orange/20 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-accent-orange" fill="currentColor" viewBox="0 0 20 20">
+              <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm border-2 border-navy/10 rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all">
+                <div className="w-12 h-12 bg-gradient-to-br from-accent-orange to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                 </div>
                 <div>
-                  <div className="text-white font-bold">An Toàn</div>
-                  <div className="text-gray-400 text-sm">Xe đời mới</div>
+                  <div className="text-black font-bold">An Toàn</div>
+                  <div className="text-gray-600 text-sm">Xe đời mới</div>
                 </div>
               </div>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <div className="grid grid-cols-2 gap-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
               <a 
                 href="tel:0853639779" 
-                className="group relative bg-gradient-to-r from-accent-red to-red-600 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl flex items-center justify-center gap-3 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-accent-red/50"
+                className="group relative bg-gradient-to-r from-accent-red to-red-600 text-white px-4 py-4 rounded-2xl font-bold text-base shadow-2xl flex items-center justify-center gap-2 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-accent-red/50"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-accent-red opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <svg className="w-6 h-6 relative z-10 group-hover:rotate-12 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-5 h-5 relative z-10 group-hover:rotate-12 transition-transform flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                <span className="relative z-10">Gọi Ngay: 0853 639 779</span>
+                <span className="relative z-10">Gọi Ngay: 0853639779</span>
               </a>
               
               <a 
                 href="https://zalo.me/0853639779" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="group bg-white/10 backdrop-blur-md border-2 border-white/20 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-white hover:text-navy transition-all duration-300 shadow-xl flex items-center justify-center gap-3 hover:scale-105"
+                className="group bg-blue-500 hover:bg-blue-600 text-white px-4 py-4 rounded-2xl font-bold text-base transition-all duration-300 shadow-xl flex items-center justify-center gap-2 hover:scale-105"
               >
                 <img 
                   src="/images/zalo_logo.png" 
                   alt="Zalo" 
-                  className="w-6 h-6 group-hover:scale-110 transition-transform"
+                  className="w-5 h-5 group-hover:scale-110 transition-transform flex-shrink-0"
                 />
                 <span>Zalo Tư Vấn</span>
               </a>
