@@ -14,10 +14,20 @@ module.exports = {
         accent: {
           red: '#E63946',
           orange: '#F77F00',
+        },
+        maroon: {
+          DEFAULT: '#6B051A',
+          dark: '#520312',
+          light: '#851c2f',
+        },
+        gold: {
+          DEFAULT: '#B89047',
+          light: '#E6D3B6',
+          bg: '#F9F6F0',
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Outfit', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
     },
   },
