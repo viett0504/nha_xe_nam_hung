@@ -219,6 +219,19 @@ const HeroSection = () => {
                   </div>
                 ))}
               </div>
+
+              {/* Bottom center 'Xem thêm' link */}
+              <div className="mt-5 pt-3 border-t border-gray-100 text-center">
+                <a 
+                  href="#pricing" 
+                  className="inline-flex items-center justify-center gap-1 text-maroon hover:text-maroon-light font-bold text-sm tracking-tight hover:underline transition"
+                >
+                  Xem thêm
+                  <svg className="w-4 h-4 animate-bounce mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 13l-7 7-7-7m7 7V3" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
           
